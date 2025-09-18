@@ -1,1 +1,94 @@
 @import "tailwindcss";
+@import "tailwindcss";
+
+@layer components {
+  /* layout */
+  .nav-default {
+    @apply text-blue-600;
+  }
+
+  .nav-default[aria-current="page"] {
+    @apply underline;
+  }
+
+  .nav-default[data-active="true"] {
+    @apply bg-blue-600 text-white border-blue-600;
+  }
+
+  /* link */
+  .link-primary {
+    @apply text-blue-600 transition-colors;
+  }
+
+  .link-title {
+    @apply text-lg font-medium;
+  }
+
+  /* text */
+  .text-accent {
+    @apply text-blue-600 font-medium text-xl;
+  }
+
+  .text-secondary {
+    @apply text-gray-500 text-sm italic;
+  }
+
+  .text-error {
+    @apply text-red-600 font-medium;
+  }
+
+  .header-title {
+    @apply text-2xl font-bold text-blue-600;
+  }
+
+  .page-container {
+    @apply mx-auto max-w-3xl p-6;
+  }
+  .page-title {
+    @apply text-2xl font-semibold;
+  }
+
+  /* button */
+  .btn-primary {
+    @apply rounded bg-blue-600 px-4 py-2 text-white disabled:opacity-50
+           hover:bg-blue-700 active:bg-blue-800 transition-colors;
+  }
+
+  /* input */
+  .input-primary {
+    @apply border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300;
+  }
+
+  /* dropdown */
+  .dropdown-primary {
+    @apply border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300;
+  }
+
+  /* pagination */
+  .pagination-wrapper {
+    @apply mt-4 flex flex-col items-center gap-2;
+  }
+
+  .pagination-nav {
+    @apply flex items-center gap-2;
+  }
+
+  /* icon buttons: « ‹ › » */
+  .pagination-icon-btn {
+    @apply rounded-lg border px-3 py-2 disabled:opacity-40;
+  }
+
+  /* page number buttons */
+  .pagination-page-btn {
+    @apply rounded-full px-3 py-2 border
+           focus:outline-none focus:ring-2 focus:ring-blue-300;
+  }
+
+  .pagination-page-btn--active {
+    @apply bg-blue-600 text-white border-blue-600;
+  }
+
+  .pagination-page-btn--inactive {
+    @apply bg-white text-gray-700 border-gray-200 hover:bg-gray-50;
+  }
+}

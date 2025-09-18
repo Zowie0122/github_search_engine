@@ -1,10 +1,12 @@
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import AppLayout from "./components/layouts/base.tsx";
 import {
   GITHUB_SEARCH_TYPES,
   type GithubSearchTypeKey,
 } from "./services/githubSearchByType.ts";
+
+const SearchByQuery = lazy(() => import("./pages/SearchByQuery.tsx"));
 
 export default function App() {
   return (
@@ -25,9 +27,9 @@ export default function App() {
               const cfg = GITHUB_SEARCH_TYPES[key];
               return (
                 <Route
-                  key={cfg.value}
+                  key={cfg.path}
                   path={`search/${cfg.path}`}
-                  element={<div>{cfg.value}</div>}
+                  element={<SearchByQuery type={cfg.value} />}
                 />
               );
             }
