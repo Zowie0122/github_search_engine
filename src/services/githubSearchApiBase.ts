@@ -1,4 +1,5 @@
-import axios, { AxiosHeaders } from "axios";
+import axios, { AxiosError, AxiosHeaders } from "axios";
+import { GithubSearchError } from "../Error";
 
 const githubSearchApiBase = axios.create({
   baseURL: import.meta.env.VITE_GITHUB_API,
@@ -21,5 +22,10 @@ githubSearchApiBase.interceptors.request.use((config) => {
   }
   return config;
 });
+
+githubSearchApiBase.interceptors.response.use(
+  (res) => res,
+  (err: AxiosError) => Promise.reject(GithubSearchError.fromAxios(err))
+);
 
 export default githubSearchApiBase;
