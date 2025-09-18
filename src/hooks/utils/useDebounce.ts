@@ -1,6 +1,6 @@
-// src/hooks/useDebounce.ts
 import { useEffect, useState } from "react";
-import { DEBOUNCED_TIME_IN_MS_DEFAULT } from "../../constants";
+
+const DEBOUNCED_TIME_IN_MS_DEFAULT = 150;
 
 export function useDebounce<T>(
   value: T,
