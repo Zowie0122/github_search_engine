@@ -1,5 +1,5 @@
 import axios, { AxiosError, AxiosHeaders } from "axios";
-import { GithubSearchError } from "../Error";
+import { GithubSearchError } from "../error";
 
 const githubSearchApiBase = axios.create({
   baseURL: import.meta.env.VITE_GITHUB_API,
