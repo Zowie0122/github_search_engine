@@ -8,7 +8,7 @@ It allows you to search across issues, repositories, users, labels, and more, wi
 ## 🚀 Features
 
 - **Search GitHub content** by issues, repositories, code, commits, users, topics, and labels.
-- **Authentication support**: use your personal access token to raise API limits.
+- **Authentication support**: use your personal access token to raise API limits and can do commits and code search. Otherwise, these two search would be removed from the UI.
 - **Optimized fetching** with React Query:
   - **Prefetch on Idle** → next page of results is prefetched when the browser is idle.
   - **Prefetch on Hover** → hovering over pagination controls triggers a delayed prefetch for that page.
