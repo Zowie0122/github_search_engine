@@ -11,7 +11,7 @@ export const QUERY_PER_PAGE_DEFAULT = 10;
 
 /** Endpoints supported by GitHub Search API */
 export const GITHUB_SEARCH_TYPES = {
-  issues: { value: "issues", path: "issues", requiresAuth: true },
+  issues: { value: "issues", path: "issues", requiresAuth: false },
   repositories: {
     value: "repositories",
     path: "repositories",
